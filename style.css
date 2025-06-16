@@ -53,4 +53,7 @@ input, select {
     border-radius: 5px;
     background-color: #ffffff;
     color: #010101;
+    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
