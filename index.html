@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c5364">
+    <title>White noise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Noise</h1>
+        <label for="noise-type">Выбери шум:</label>
+        <select id="noise-type">
+            <option value="white.mp3">Белый шум</option>
+            <option value="heart.mp3">Сердцебиение</option>
+        </select><br>
+
+        <label for="timer">Отключить через (мин):</label>
+        <input type="number" id="timer" min="1" max="120" placeholder="например, 10"><br>
+
+        <button id="play">On</button>
+        <button id="stop">Off</button>
+    </div>
+
+    <audio id="noise-audio" loop>
+        <source id="audio-source" src="1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const playButton = document.getElementById('play');
+        const stopButton = document.getElementById('stop');
+        const audio = document.getElementById('noise-audio');
+        const audioSource = document.getElementById('audio-source');
+        const noiseTypeSelect = document.getElementById('noise-type');
+        const timerInput = document.getElementById('timer');
+
+        let timerId = null;
+
+        playButton.addEventListener('click', () => {
+            const selectedNoise = noiseTypeSelect.value;
+            if (audioSource.src.indexOf(selectedNoise) === -1) {
+                audioSource.src = selectedNoise;
+                audio.load();
+            }
+
+            audio.play();
+
+            const minutes = parseInt(timerInput.value);
+            if (!isNaN(minutes) && minutes > 0) {
+                clearTimeout(timerId); // если таймер уже был
+                timerId = setTimeout(() => {
+                    audio.pause();
+                    audio.currentTime = 0;
+                }, minutes * 60 * 1000);
+            }
+        });
+
+        stopButton.addEventListener('click', () => {
+            audio.pause();
+            audio.currentTime = 0;
+            clearTimeout(timerId);
+        });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+    .then(reg => console.log('SW registered', reg))
+    .catch(err => console.error('SW registration failed', err));
+}
+    </script>
+</body>
+</html>
