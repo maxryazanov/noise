@@ -4,8 +4,8 @@
   "description": "Шум для сна и концентрации",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#0f2027",
-  "theme_color": "#2c5364",
+  "background_color": "#222222",
+  "theme_color": "#222222",
   "icons": [
     {
       "src": "192.png",
