@@ -26,14 +26,13 @@ button {
     padding: 20px 20px;
     font-size: 16px;
     color: #ffffff;
-    background-color: #00eaffc9;
+    background-color: #8e0dc5;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-button:hover {
-    background-color: #16fafe;
-}
+
+
 h1 {
     color: #ffffff;
     font-size: 40px;
