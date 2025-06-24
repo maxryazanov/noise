@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
+    <div id="noise-section" class="container-noise section">
         <h1>Noise</h1>
         <label for="noise-type">Оберіть шум:</label>
         <select id="noise-type">
@@ -24,17 +24,58 @@
         <button id="play">Play</button>
         <button id="stop">Stop</button><br>
 
-
-        <p class="copy">Developed by <a href="http://github.com/maxryazanov">MARKONS</a></p>
-
-        
+        <footer class="copy">
+            <p>© 2025 Noise. All rights reserved.</p>
+            <p>Made with ❤️ by <a href="http://github.com/maxryazanov">MARKONS</a></p>
+        </footer>
     </div>
+
+    
+    <div id="tracker-section" class="container-tracker section h-d">
+        <h1>Трекер</h1>
+        <p>Відстежуйте час сну або активності вашої дитини.</p>
+
+        <div class="tracker-display" id="time-display">00:00:00</div>
+        <div class="last-session" id="last-session">З останньої сесії: 00:00:00</div>
+
+        <div class="tracker-buttons">
+            <button id="start-btn">Старт</button>
+            <button id="stop-btn">Стоп</button>
+            <button id="reset-btn">Скинути</button>
+            <button id="save-btn">Зберегти сесію</button>
+        </div>
+        <footer class="copy">
+            <p>© 2025 Noise. All rights reserved.</p>
+            <p>Made with ❤️ by <a href="http://github.com/maxryazanov">MARKONS</a></p>
+        </footer>
+    </div>
+
+    <div id="support-section" class="container-support section h-d">
+        <h1>Підтримати</h1>
+        <p>Якщо вам подобається цей застосунок — підтримайте розробника ❤️</p>
+        <p><a class="donate" href="https://send.monobank.ua/jar/5K5SDHtc3e">Посилання на донат тут.</a></p>
+        <footer class="copy">
+            <p>© 2025 Noise. All rights reserved.</p>
+            <p>Made with ❤️ by <a href="http://github.com/maxryazanov">MARKONS</a></p>
+        </footer>
+    </div>
+        
+
+    <nav class="nav">
+        <div class="nav-container">
+            <button class="nav-b" data-target="noise-section">Шум</button>
+            <button class="nav-b" data-target="tracker-section">Трекер</button>
+            <button class="nav-b" data-target="support-section">Підтримати</button>
+        </div> 
+    </nav>
 
     <audio id="noise-audio" loop>
         <source id="audio-source" src="1.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
+    <script src="tracker.js" defer></script>
+    <script src="button.js" defer></script>
     <script>
         const playButton = document.getElementById('play');
         const stopButton = document.getElementById('stop');
