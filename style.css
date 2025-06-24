@@ -63,3 +63,13 @@ select{
     background-position: right 10px center;
     background-size: 12px;
 }
+.copy{
+    color: #ffffff;
+}
+.copy a{
+    color: #8e0dc5;
+    text-decoration: none;
+}
+.copy a:hover{
+    text-decoration: underline;
+}

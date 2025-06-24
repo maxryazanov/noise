@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2c5364">
-    <title>White noise</title>
+    <title>Noise - білий шум</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
         <h1>Noise</h1>
-        <label for="noise-type">Выбери шум:</label>
+        <label for="noise-type">Оберіть шум:</label>
         <select id="noise-type">
-            <option value="white.mp3">Белый шум</option>
-            <option value="heart.mp3">Сердцебиение</option>
+            <option value="white.mp3">Білий шум</option>
+            <option value="heart.mp3">Серцебиття</option>
         </select><br>
 
-        <button id="play">Play</button>
-        <button id="stop">Stop</button>
+        <label for="timer">Відключити через (хв):</label>
+        <input type="number" id="timer" min="1" max="120" inputmode="numeric" pattern="[0-9]*" placeholder="наприклад, 10"><br>
 
-        <label for="timer">Отключить через (мин):</label>
-        <input type="number" id="timer" min="1" max="120" inputmode="numeric" pattern="[0-9]*" placeholder="например, 10"><br>
+        <button id="play">Play</button>
+        <button id="stop">Stop</button><br>
+
+
+        <p class="copy">Developed by <a href="http://github.com/maxryazanov">MARKONS</a></p>
 
         
     </div>
