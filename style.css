@@ -137,6 +137,8 @@ select{
     text-decoration: underline;
 }
 .copy2{
+    position: absolute;
+    bottom: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,6 +146,13 @@ select{
     gap: 5px;
     color: #ffffff;
     margin-top: 40px;
+}
+.copy2 a{
+    color: #8e0dc5;
+    text-decoration: none;
+}
+.copy2 a:hover{
+    text-decoration: underline;
 }
 
 nav{
