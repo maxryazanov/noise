@@ -121,6 +121,9 @@ select{
 
 
 .copy{
+    position: absolute;
+    bottom: 10%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
