@@ -136,6 +136,16 @@ select{
 .copy a:hover{
     text-decoration: underline;
 }
+..copy2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
 nav{
     position: fixed;
     bottom: 0;
