@@ -137,15 +137,13 @@ select{
     text-decoration: underline;
 }
 .copy2{
-    position: absolute;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 5px;
     color: #ffffff;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 nav{
