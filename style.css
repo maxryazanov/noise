@@ -136,7 +136,9 @@ select{
 .copy a:hover{
     text-decoration: underline;
 }
-..copy2{
+.copy2{
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
